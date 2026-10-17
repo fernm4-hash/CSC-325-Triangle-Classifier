@@ -2,12 +2,12 @@ import math
 
 def is_valid_triangle(a, b, c) -> bool:
     if a <=0 or b <=0 or c <= 0:
-        return false
+        return False
     
     if a + b <= c or a + c <= b or b + c <= a:
-        return false
+        return False
     
-    return true
+    return True
 
 def classify_triangle(a, b, c) -> str:
     if not is_valid_triangle(a,b,c):
@@ -25,7 +25,11 @@ def classify_triangle(a, b, c) -> str:
     sides = [a,b,c]
     sides.sort()
 
+    x,y,z = sides
 
-    if math.isclose(a**2 + b**2, c**2):
+
+    if math.isclose(x**2 + y**2, z**2):
         return "Right " + triangle 
+
+    return triangle
         
